@@ -16,7 +16,7 @@ class IngredientDetail extends Component {
 
           if (ingredientList[ingName] === undefined) {
             return <div key={ingIndex} className='rep-d-s-ingredient'>
-              {ingName} 
+              {ingName}
               {/*this is in case that special ing not exist in the database, just output the name*/}
             </div>
           } else {

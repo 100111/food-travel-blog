@@ -7,7 +7,7 @@ class StackNavBar extends Component {
   }
 
   activeSection = (secionID) => {
-    if (secionID == this.props.currentSection) return "active";
+    if (secionID === this.props.currentSection) return "active";
     return "non-active";
   }
 
@@ -83,13 +83,13 @@ class StackNavBar extends Component {
                             <div className="dropdown__content col-lg-2">
                               <ul className="menu-vertical">
                                 <li>
-                                  <a href="#">Single Link</a>
+                                  <a>Single Link</a>
                                 </li>
                                 <li>
-                                  <a href="#">Single Link</a>
+                                  <a>Single Link</a>
                                 </li>
                                 <li>
-                                  <a href="#">Single Link</a>
+                                  <a>Single Link</a>
                                 </li>
                               </ul>
                             </div>

@@ -12,6 +12,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 import Header from './js/layout_comp/Header';
+import Banner from './js/layout_comp/Banner';
 import Footer from './js/layout_comp/Footer';
 import Landing from './js/layout_comp/Landing';
 import FoodView from './js/food_comp/FoodView';
@@ -59,13 +60,16 @@ ReactDOM.render(
       <ConnectedRouter history={history}>
         <div id='app'>
           <Header />
-          <Switch>
-            <Route exact path='/' component={Landing} />
-            <Route path='/food' component={FoodView} />
-            <Route path='/review' component={ReviewView} />
-            <Route path='/travel' component={TravelView} />
-            <Route path="/recipe/:repid" component={RecipeView} />
-          </Switch>
+          <Banner />
+          <div className="main-container">
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route path='/food' component={FoodView} />
+              <Route path='/review' component={ReviewView} />
+              <Route path='/travel' component={TravelView} />
+              <Route path="/recipe/:repid" component={RecipeView} />
+            </Switch>
+          </div>
           <Footer />
         </div>
       </ConnectedRouter>

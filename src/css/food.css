@@ -81,10 +81,26 @@
   
 }
 
+
+
 @media all and (max-width: 800px) {
-  
+  .rep-container {
+    width: 100%;
+    margin: auto;
+  }
+  #recipe-view {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 @media all and (min-width: 800px){
-  
+  .rep-container {
+    width: 70%;
+    margin: auto;
+  }
+  #recipe-view {
+    width: 70%;
+    margin: auto;
+  }
 }

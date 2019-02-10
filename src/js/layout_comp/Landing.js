@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-
-import StackTyped from '../stack_comp/STyped'
+import React, { Component } from 'react'
 import { Parallax } from 'react-parallax'
 
 import '../../css/landing.css'
@@ -15,35 +13,9 @@ class Landing extends Component {
 
     }
 
-
     render() {
-        return (<div className="main-container">
-            <Parallax className="sth" bgImage={"third_party/img/work-2.jpg"} strength={500} >
-                <section className="cover imagebg height-100 text-center" data-overlay="3">
-                    <div className="container pos-vertical-center">
-                        <div className="row">
-                            <div className="col-md-9 col-lg-8">
-                                <span className="h1 inline-block">Hi, welcome to my </span>
-                                <StackTyped strings={['website', 'blog', 'site about food', 'site about travel', 'site for reviews', 'life :)']} />
-                                <p className="lead">...</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div className="pos-absolute pos-bottom col-12">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12 text-left">
-                                    <div className="text-block">
-                                        <h5>Teahupo'o Beach</h5>
-                                        <span>French Polynesia</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </section></Parallax>
+        return (<div >
+            
             <Parallax className="sth" bgImage={"third_party/img/landing-9.jpg"} strength={500} >
                 <section className="cover cover-features imagebg" data-overlay="4">
                     <div className="container">
@@ -174,6 +146,7 @@ class Landing extends Component {
                     </div>
                 </div>
             </section>
+
             <Parallax className="sth" bgImage={"third_party/img/recruitment-4.jpg"} strength={500} >
                 <section className="imagebg feature-large-7 switchable">
                     <div className="container">
@@ -258,6 +231,7 @@ class Landing extends Component {
                         </div>
                     </div>
                 </section></Parallax>
+
         </div>
         );
     }

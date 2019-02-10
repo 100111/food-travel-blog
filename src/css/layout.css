@@ -22,20 +22,8 @@
   height: 80px;
 }
 
-.app-intro {
-  font-size: large;
-}
-
-.header-tabs a {
-  color: white;
-}
-
-.header-tabs .active{
-  color: black;
-}
-
-.header-title h1 {
-  text-align: center;
+.banner-section {
+  transition: height 1s; 
 }
 
 @keyframes app-logo-spin {

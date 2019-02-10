@@ -18,22 +18,22 @@ class StackFooter extends Component {
                     <div className="col-sm-6 text-right text-center-xs">
                         <ul className="social-list list-inline">
                             <li>
-                                <a href="#">
+                                <a>
                                     <i className="socicon socicon-google icon icon--xs"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a>
                                     <i className="socicon socicon-twitter icon icon--xs"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a>
                                     <i className="socicon socicon-facebook icon icon--xs"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a>
                                     <i className="socicon socicon-instagram icon icon--xs"></i>
                                 </a>
                             </li>

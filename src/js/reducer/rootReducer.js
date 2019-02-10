@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
 import { connectRouter } from 'connected-react-router'
-
 import { foodReducer } from './foodReducer';
 import { generalReducer } from './generalReducer';
 

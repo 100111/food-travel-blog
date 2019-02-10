@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as firebase from 'firebase';
+import { goBack } from 'connected-react-router'
 
 import RecipeDetail from './RecipeDetail';
 import { recipeDetailLoaded, ingredientChanged } from '../actions/foodActions'
@@ -43,8 +44,10 @@ class RecipeView extends Component {
 
     render() {
         return (
-            <div id="recipe-view">
+            <div id="recipe-view" >
                 <h4>Recipe View</h4>
+                <a onClick={() => this.props.dispatch(goBack())} className="icon icon-Arrow-Left2"
+                    style={{ cursor: 'pointer'}}></a>
                  {this.renderView()} 
             </div>
         );
