@@ -2,16 +2,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import * as firebase from 'firebase';
 
-import { applyMiddleware, combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux'
-import { Route } from 'react-router'
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
-import createHistory from 'history/createBrowserHistory'
-import logger from 'redux-logger';
+import { Route, Switch } from 'react-router'
+import { ConnectedRouter } from 'connected-react-router'
+import configureStore, { history } from './js/configStore'
 
-import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { deepPurple500, deepPurple700, grey400 } from 'material-ui/styles/colors'
+// import { deepPurple500, deepPurple700, grey400 } from 'material-ui/styles/colors'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 import Header from './js/layout_comp/Header';
@@ -24,24 +21,14 @@ import TravelView from './js/travel_comp/TravelView';
 import './css/index.css'
 import './css/layout.css'
 
-import { foodReducer } from './js/reducer/foodReducer';
-import { generalReducer } from './js/reducer/generalReducer';
 
-injectTapEventPlugin()
-
-//Combine all reducers together
-const reducers = combineReducers({
-  general: generalReducer,
-  food: foodReducer,
-  router: routerReducer
-})
-
-const myHistory = createHistory();
+//const myHistory = createHistory();
 //Middleware, remove the logger when deploy
-const middleware = applyMiddleware(routerMiddleware(myHistory), logger());
+//const middleware = applyMiddleware(routerMiddleware(myHistory), logger());
 
 //Create the store
-const store = createStore(reducers, middleware)
+//const store = createStore(reducers, middleware)
+const store = configureStore(/* provide initial state if any */);
 
 //Firebase connection
 var fbConfig = {
@@ -69,14 +56,16 @@ const muiTheme = getMuiTheme({
 ReactDOM.render(
   <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
-      <ConnectedRouter history={myHistory}>
+      <ConnectedRouter history={history}>
         <div id='app'>
           <Header />
-          <Route exact path='/' component={Landing} />
-          <Route path='/food' component={FoodView} />
-          <Route path='/review' component={ReviewView} />
-          <Route path='/travel' component={TravelView} />
-          <Route path="/recipe/:repid" component={RecipeView} />
+          <Switch>
+            <Route exact path='/' component={Landing} />
+            <Route path='/food' component={FoodView} />
+            <Route path='/review' component={ReviewView} />
+            <Route path='/travel' component={TravelView} />
+            <Route path="/recipe/:repid" component={RecipeView} />
+          </Switch>
           <Footer />
         </div>
       </ConnectedRouter>

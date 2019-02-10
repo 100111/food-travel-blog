@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link, IndexLink } from 'react-router-dom';
-import { push } from 'react-router-redux';
-
-import AppBar from 'material-ui/AppBar';
-import { Tabs, Tab } from 'material-ui/Tabs';
+// import { Link, IndexLink } from 'react-router-dom';
+import { push } from 'connected-react-router'
 
 import StackNavBar from '../stack_comp/NavBar'
 
@@ -44,45 +41,6 @@ class Header extends Component {
                 break;
         }
     };
-
-    render1() {
-        document.title = this.props.title;
-
-        var styles = {
-            appBar: {
-                flexWrap: 'wrap',
-            },
-            tabs: {
-                width: '100%',
-            },
-        };
-
-        console.log(this.checkCurrentTab());
-
-
-        return <AppBar title={this.props.title} style={styles.appBar} className='header-title' >
-
-            {/* iconElementLeft={<Avatar>T</Avatar>} */}
-            <Tabs onChange={this.handleChange} style={styles.tabs} className='header-tabs' value={this.checkCurrentTab()}>
-                <Tab label={'Home'} value='home' />
-                <Tab label={'Food'} value='food' />
-                <Tab label={'Travel'} value='travel' />
-            </Tabs>
-        </AppBar>;
-    }
-
-    render2() {
-        return (
-            <header id='header'>
-                <h2>Food!</h2>
-                <ol className="menu">
-                    <li><IndexLink to='/' activeClassName="active">Home</IndexLink></li>
-                    <li><Link to='/food' activeClassName="active" className={this.isURLAboutFood()}>Food</Link></li>
-                    <li><Link to='/travel' activeClassName="active">Travel</Link></li>
-                </ol>
-            </header>
-        );
-    }
 
     render() { // Use Stack Theme
         document.title = this.props.title;

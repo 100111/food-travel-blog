@@ -19,7 +19,7 @@ export const generalReducer = (state = generalReducerInitialState, action) => {
       }
     case '@@router/LOCATION_CHANGE':
       var viewMode = 0;
-      switch (action.payload.pathname) {
+      switch (action.payload.location.pathname) {
         case "/food":
           viewMode = 1
           break;
