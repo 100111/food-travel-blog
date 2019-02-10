@@ -1,0 +1,9 @@
+
+.react-parallax > img{
+  max-width: none;
+  /* background-size: cover !important;
+  background-position: 50% 50% !important; */
+  object-fit: cover;
+
+  margin-top: -12.5%; 
+}

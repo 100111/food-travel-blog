@@ -1,0 +1,62 @@
+#app {
+  
+}
+
+#header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+#footer {
+  position: static;
+  bottom: 0px;
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.app-logo {
+  animation: app-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.app-intro {
+  font-size: large;
+}
+
+.header-tabs a {
+  color: white;
+}
+
+.header-tabs .active{
+  color: black;
+}
+
+.header-title h1 {
+  text-align: center;
+}
+
+@keyframes app-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*Small screen*/
+@media all and (max-width: 800px) {
+  .rep-list {max-width: 100vw;}
+  .rep-detail {max-width: 100vw;}
+}
+
+/*Large screen*/
+@media all and (min-width: 800px) and (max-width: 1100px){
+  .rep-list {max-width: 80vw;}
+  .rep-detail {max-width: 80vw;}
+}
+
+/*Extra Large screen*/
+@media all and (min-width: 1100px) {
+  .rep-list {max-width: 70vw;}
+  .rep-detail {max-width: 70vw;}
+}

@@ -1,0 +1,90 @@
+#food-view, #recipe-view> h4 {
+  text-align: center;
+}
+
+/* .rep-list div{
+    border: 1px solid black;  
+}
+.rep-list svg{
+    border: 1px solid green;  
+} */
+
+
+.rep-list {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  /* max-width: 70vw; */
+   display: flex; 
+
+   flex-flow: row wrap; 
+}
+
+.rep-card {
+  flex: 1 1;
+  
+  /* height: 300px; */
+  margin: 5px;
+}
+
+.rep-card:hover {
+  /*flex-basis: 20%;*/
+}
+
+.rep-card-title {
+  /* width: fit-content;  */
+  min-width: 300px;
+}
+
+.rep-card-title > span:first-child{
+  font-family: 'Roboto Slab', cursive;
+  font-weight: bold;
+  font-size: 22px !important;
+  color: #333333 !important;
+
+   min-height: 72px; 
+  margin: auto;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rep-card-media {
+  height: 220px;
+  width: 100%;
+}
+
+.rep-card-img {
+  height: 100%;
+  width: 100%;
+
+  background-position: center;
+  background-size: cover;
+  border-radius: 2px 2px 0px 0px;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.rep-card-img-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 27px;
+  margin-bottom: 20px;
+  
+}
+
+@media all and (max-width: 800px) {
+  
+}
+
+@media all and (min-width: 800px){
+  
+}

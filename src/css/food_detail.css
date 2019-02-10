@@ -1,0 +1,292 @@
+.rep-detail {
+      /* border: 1px solid green;     */
+}
+
+ .rep-detail div { 
+   /* border: 1px solid black;          */
+}
+
+.rep-detail{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.rep-d-header{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: 8px 7px;
+}
+
+.rep-d-h-hero {
+  background-position: center;
+  background-size: cover;
+  flex: 1 auto;
+}
+
+.rep-d-h-info{
+  display: flex;
+  padding-left: 5px;
+  flex-flow: column wrap;
+  justify-content: space-between
+}
+
+.rep-d-h-info > h2{
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 0 1 auto;  
+}
+
+.rep-d-h-info-container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.rep-d-h-info-container > div{
+  /* flex: 1 1;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 10px;
+
+}
+
+.rep-d-h-info-container .material-icons {
+  margin-right: 10px;
+}
+
+.rep-time, .rep-serving, .rep-calo{
+  flex: 3 0 70px;
+  font-size: 20px;
+  /* width: 70px; */
+}
+
+.rep-calo{
+  font-size: 18px;
+ }
+
+.tag-list{
+   
+}
+
+/* .rep-d-side-container {
+  border: 1px solid black;  
+}  
+.rep-d-side-container div {
+  border: 1px solid black;  
+}   */
+
+.rep-d-summary {
+  display: flex;
+  flex-direction: row;  
+}
+
+
+.rep-d-s-ingredients {
+  flex-grow: 1;
+  min-width: 280px;
+  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  margin: 8px 7px;
+  padding: 8px;
+}
+
+
+.rep-d-s-ingredient {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  justify-content: center;
+}
+
+.ingredient-name{
+  width: 70%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px gray;
+}
+
+.ingredient-amount{
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 1px gray;
+}
+
+.rep-d-side-container{
+  flex-grow: 1;
+  min-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 8px 7px;
+}
+
+.rep-d-s-text {
+  flex-grow: 1;
+
+  font-style: italic;
+  padding: 0px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rep-d-s-special {
+  padding: 10px 10px;
+
+  display: flex;
+  flex-direction: row;
+}
+.rep-d-s-special div{
+  margin-right: 8px;
+}
+
+.tag-list{
+  display: flex;
+}
+
+.tag {
+  margin: 4px;
+}
+
+/* .rep-d-i-step div {
+  border: 1px solid black;  
+}
+
+.rep-d-i-step span {
+  border: 1px solid black;  
+} */
+
+.rep-d-i-step {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 7px;
+}
+
+.rep-d-i-media {
+  background-position: center;
+  background-size: cover;
+}
+
+.step-side-bar{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.step-side-bar-header{
+    height: 64px;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    font-weight: 500;
+}
+
+.step-side-bar-number {
+  flex: 0 0 24;
+  display: block;
+  color: rgb(0, 188, 212);
+  fill: rgb(0, 188, 212);
+  height: 24px;
+  width: 24px;
+  user-select: none;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  font-size: 24px;
+  padding-right: 8px;
+}
+
+.step-side-bar-text {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+
+/*Small screen*/
+@media all and (max-width: 800px) {
+  .rep-d-h-hero {
+    height: 56vw;
+    width: 100vw;
+  }
+  .rep-d-h-info {
+    flex: 1 0 auto;
+  }
+
+  .rep-d-i-media {
+    width: 100vw;
+    height: 56vw;
+  }
+  .step-side-bar {
+    flex: 1 1 10vw;
+  }
+  .rep-d-summary {
+    flex-wrap: wrap;
+  }
+  .ingredient-amount{
+    width: 30vw;
+  }
+  .ingredient-name{
+    width: 30vw;
+  }
+}
+
+/*Large screen*/
+@media all and (min-width: 800px) and (max-width: 1100px){
+  .rep-d-h-hero {
+    width: 50vw;
+    height: 29vw;
+  }
+  .rep-d-h-info {
+    flex: 1 0 200px;
+  }
+
+  .rep-d-i-media {
+    width: 50vw;
+    height: 28vw;
+  }
+
+  .step-side-bar {
+    flex: 1 1 10vw;
+  }
+}
+
+/*Extra Large screen*/
+@media all and (min-width: 1100px) {
+  .rep-d-h-hero {
+    width: 50vw;
+    height: 29vw;
+  }
+  .rep-d-h-info {
+    flex: 1 0 200px;
+  }
+
+  .rep-d-i-media {
+    width: 40vw;
+    height: 22.5vw;
+  }
+
+  .step-side-bar {
+    flex: 1 1 10vw;
+  }
+}
+
+.rep-d-thread-devider {
+  width: 100%;
+  height: 20px;
+}
